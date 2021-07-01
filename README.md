@@ -29,7 +29,27 @@ Download the datasets used [here](https://github.com/DelphineGambier/EMI--CVVR2-
 ## I - GAN
 ## II - Autoencoder
 ## III - Evaluation 
+To evaluate the models we use the [FID](https://en.wikipedia.org/wiki/Fr%C3%A9chet_inception_distance) (Fréchet inception distance) : the FID is the performance measure used to evaluate the quality of images created by a generative model. 
+
+![FID](/Ressources/FID.jpg)
+
+Find the compute FID in [3-Evaluation](https://github.com/DelphineGambier/EMI--CVVR2-Generative-adversarial-network/tree/main/3-Evaluation).
+To calculate de FID you juste have to drag and drop the python files in Google Colaboratory : 
+
+![Evaluation Files](/Ressources/eval_files.png) 
+
+Then create two directories : 'gold' and 'out'
+- import your training images (originals) in 'gold' directory
+- import your result images in 'out' directory 
+
+**Warning :** There must be the same number of images in both folders. 
+
+Get the FID by entering the following command in Google Colaboratory :
 ```python
 ! python compare_output.py -o out -g gold
 ```
 ## IV -  To go further
+If you want to go deeper into the subject, here are some links to other projects about GANs (but they use Pytorch instead of Tensorflow) :
+- GAN that generates foreground and background separately : https://github.com/jwyang/lr-gan.pytorch
+- GAN that generates several objects in one image : https://github.com/tohinz/multiple-objects-gan
+- GAN that generates an image from coordinates : https://github.com/bioinf-jku/TTUR
