@@ -1,5 +1,6 @@
 # EMI--CVVR2-Generative-adversarial-network
-The aim of this project is to generate images of apples to build a database that will be used to train other networks using Python and Tensorflow.
+The aim of this project is to generate images of apples to build two databases, a database of good apples and an other database of dammaged apples, that will be used to train other networks using Python and Tensorflow.
+[Database1](/Ressources/database1.JPG) [DataBase2](/Ressources/database2.JPG)
 ## 0 - Requierement 
 For this project you need to use [Google Colaboratory](https://colab.research.google.com/notebooks/intro.ipynb) to run the code. 
 You also need the following libraries and versions (some of them can be already installed in google colaboratory or will be installed directly by running the notebooks) :
@@ -26,8 +27,30 @@ This project requires pix2pix model for GAN avalable [here](https://github.com/t
 Download the datasets used [here](https://github.com/DelphineGambier/EMI--CVVR2-Generative-adversarial-network/tree/main/Datasets).  
 *(You can also use your own images datasets)*
 
-## I - GAN
+## I - Generative Adversarial Networks
+### 1 - Apple Generator
+This GAN is a DCGAN that have to generate good apple images to feed the first database.
+- Data :
+To train the Apple Generator use the [Clean_apple.zip](https://github.com/DelphineGambier/EMI--CVVR2-Generative-adversarial-network/blob/main/Datasets/Clean_apple-20210701T103559Z-001.zip) as training data.
+- Training :
+To train the Apple Generator run the [Apple_Generator.ipynb](https://github.com/DelphineGambier/EMI--CVVR2-Generative-adversarial-network/blob/main/1-GANs/Apple_Generator.ipynb) Notebook.
+- Results : 
+Images obtained after training  :
+[Results 1](/Ressources/results1.png)
+*Note : this GAN is not functional but is published to find ways to improve it so the results are not the expected results *
+
+### 2 - Clean apples to dammaged apples
+The idea was to turn the clean apple aimages obtained with the first GAN into dammaged apple images in order to feed the second database. For this we compute a cyclegan based on the pix2pix model.
+- Data :
+To train the Clean to Dammaged GAN use the [Clean_apple.zip](https://github.com/DelphineGambier/EMI--CVVR2-Generative-adversarial-network/blob/main/Datasets/Clean_apple-20210701T103559Z-001.zip) for the good apples and [Dammaged_apple.zip](https://github.com/DelphineGambier/EMI--CVVR2-Generative-adversarial-network/blob/main/Datasets/Dammaged_apple-20210701T103602Z-001.zip) for the dammaged ones.
+- Training :
+To train the Clean to Dammaged GAN run the [Clean_to_dammaged_apples.ipynb](https://github.com/DelphineGambier/EMI--CVVR2-Generative-adversarial-network/blob/main/1-GANs/Clean_to_dammaged_apples.ipynb) Notebook.
+- Results : 
+[Results 2](/Ressources/results2.png)
+We can see that the GAN turn a good red apple in yellow and green.
+
 ## II - Autoencoder
+
 ## III - Evaluation 
 To evaluate the models we use the [FID](https://en.wikipedia.org/wiki/Fr%C3%A9chet_inception_distance) (Fréchet inception distance) : the FID is the performance measure used to evaluate the quality of images created by a generative model. 
 
