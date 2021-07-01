@@ -54,7 +54,28 @@ To train the Clean to Dammaged GAN run the [Clean_to_dammaged_apples.ipynb](http
 
 We can see that the GAN turn a good red apple in yellow and green.
 
-## II - Autoencoder
+## II - Autoencoders
+We looked for a solution to the Apple Generator GAN and found that the Autoencoder could be an alternative to this GAN.
+- Data : 
+To train the Autoencoders use the [Autoencoder_Apples.zip](https://github.com/DelphineGambier/EMI--CVVR2-Generative-adversarial-network/blob/main/Datasets/Autoencoder_Apples-20210701T103555Z-001.zip).
+### 1 - Gray autoencoder
+The first version of the autoencoder is a grayscale autoencoder that encode apple images.
+- Training : 
+To train the Gray Autoencoder run the [Gray_Autoencoder.ipynb](https://github.com/DelphineGambier/EMI--CVVR2-Generative-adversarial-network/blob/main/2-Autoencoders/Gray_Autoencoder.ipynb) Notebook.
+- Results : 
+
+![Results 3](/Ressources/results3.png)
+
+### 2 - RGB autoencoder
+- Training :
+To train the RGB Autoencoder run the [RGB_Autoencoder.ipynb](https://github.com/DelphineGambier/EMI--CVVR2-Generative-adversarial-network/blob/main/2-Autoencoders/RGB_Autoencoder.ipynb) Notebook.
+- Results : 
+
+![Results R](/Ressources/resultsr.png)
+![Results G](/Ressources/resultsg.png)
+![Results B](/Ressources/resultsb.png)
+
+![Results 4](/Ressources/results4.png)
 
 ## III - Evaluation 
 To evaluate the models we use the [FID](https://en.wikipedia.org/wiki/Fr%C3%A9chet_inception_distance) (Fréchet inception distance) : the FID is the performance measure used to evaluate the quality of images created by a generative model. 
