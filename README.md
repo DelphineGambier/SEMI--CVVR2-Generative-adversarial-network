@@ -1,5 +1,6 @@
 # EMI--CVVR2-Generative-adversarial-network
 The aim of this project is to generate images of apples to build two databases, a database of good apples and an other database of dammaged apples, that will be used to train other networks using Python and Tensorflow.
+
 ![Database1](/Ressources/database1.JPG) ![DataBase2](/Ressources/database2.JPG)
 ## 0 - Requierement 
 For this project you need to use [Google Colaboratory](https://colab.research.google.com/notebooks/intro.ipynb) to run the code. 
@@ -36,7 +37,9 @@ To train the Apple Generator use the [Clean_apple.zip](https://github.com/Delphi
 To train the Apple Generator run the [Apple_Generator.ipynb](https://github.com/DelphineGambier/EMI--CVVR2-Generative-adversarial-network/blob/main/1-GANs/Apple_Generator.ipynb) Notebook.
 - Results : 
 Images obtained after training  :
+
 ![Results 1](/Ressources/results1.png)
+
 *Note : this GAN is not functional but is published to find ways to improve it so the results are not the expected results *
 
 ### 2 - Clean apples to dammaged apples
@@ -46,7 +49,9 @@ To train the Clean to Dammaged GAN use the [Clean_apple.zip](https://github.com/
 - Training :
 To train the Clean to Dammaged GAN run the [Clean_to_dammaged_apples.ipynb](https://github.com/DelphineGambier/EMI--CVVR2-Generative-adversarial-network/blob/main/1-GANs/Clean_to_dammaged_apples.ipynb) Notebook.
 - Results : 
+
 ![Results 2](/Ressources/results2.png)
+
 We can see that the GAN turn a good red apple in yellow and green.
 
 ## II - Autoencoder
