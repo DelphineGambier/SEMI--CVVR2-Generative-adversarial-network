@@ -49,7 +49,7 @@ To train the Clean to Dammaged GAN use the [Clean_apple.zip](https://github.com/
 - Training :
 To train the Clean to Dammaged GAN run the [Clean_to_dammaged_apples.ipynb](https://github.com/DelphineGambier/EMI--CVVR2-Generative-adversarial-network/blob/main/1-GANs/Clean_to_dammaged_apples.ipynb) Notebook.
 - Results : 
-
+Images obtained after training  :
 ![Results 2](/Ressources/results2.png)
 
 We can see that the GAN turn a good red apple in yellow and green.
@@ -63,20 +63,28 @@ The first version of the autoencoder is a grayscale autoencoder that encode appl
 - Training : 
 To train the Gray Autoencoder run the [Gray_Autoencoder.ipynb](https://github.com/DelphineGambier/EMI--CVVR2-Generative-adversarial-network/blob/main/2-Autoencoders/Gray_Autoencoder.ipynb) Notebook.
 - Results : 
-
+Encoded images obtained after training  :
 ![Results 3](/Ressources/results3.png)
 
+*Note : The results are better for images where there is only one apple*
 ### 2 - RGB autoencoder
+The principle here is to use the same type of autoencoder as for gray images but using it 3 times separately on each RGB component of a color image.
 - Training :
 To train the RGB Autoencoder run the [RGB_Autoencoder.ipynb](https://github.com/DelphineGambier/EMI--CVVR2-Generative-adversarial-network/blob/main/2-Autoencoders/RGB_Autoencoder.ipynb) Notebook.
 - Results : 
-
+Encoded images obtained after training of the autoencoder on the red component of the images :
 ![Results R](/Ressources/resultsr.png)
+
+Encoded images obtained after training of the autoencoder on the green component of the images :
 ![Results G](/Ressources/resultsg.png)
+
+Encoded images obtained after training of the autoencoder on the blue component of the images :
 ![Results B](/Ressources/resultsb.png)
 
+Images reconstructed from the 3 components :
 ![Results 4](/Ressources/results4.png)
 
+*Note : Same as the gray autoencoder, the results are better for images where there is only one apple*
 ## III - Evaluation 
 To evaluate the models we use the [FID](https://en.wikipedia.org/wiki/Fr%C3%A9chet_inception_distance) (Fréchet inception distance) : the FID is the performance measure used to evaluate the quality of images created by a generative model. 
 
