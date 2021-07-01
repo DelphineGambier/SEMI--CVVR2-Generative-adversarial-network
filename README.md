@@ -1,4 +1,4 @@
-# EMI--CVVR2-Generative-adversarial-network
+# SEMI--CVVR2-Generative-adversarial-network
 The aim of this project is to generate images of apples to build two databases, a database of good apples and an other database of dammaged apples, that will be used to train other networks using Python and Tensorflow.
 
 ![Database1](/Ressources/database1.JPG) ![DataBase2](/Ressources/database2.JPG)
