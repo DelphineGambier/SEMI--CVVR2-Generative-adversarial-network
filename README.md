@@ -40,7 +40,7 @@ Images obtained after training  :
 
 ![Results 1](/Ressources/results1.png)
 
-*Note : this GAN is not functional but is published to find ways to improve it so the results are not the expected results *
+*Note : this GAN is not functional but is published to find ways to improve it so the results are not the expected results*
 
 ### 2 - Clean apples to dammaged apples
 The idea was to turn the clean apple aimages obtained with the first GAN into dammaged apple images in order to feed the second database. For this we compute a cyclegan based on the pix2pix model.
