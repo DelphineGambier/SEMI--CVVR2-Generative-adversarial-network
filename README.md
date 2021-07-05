@@ -1,6 +1,11 @@
 # SEMI--CVVR2-Generative-adversarial-network
 The aim of this project is to generate images of apples to build two databases, a database of good apples and an other database of dammaged apples, that will be used to train other networks using Python and Tensorflow.
 
+This project was inspired by the following 3 tutorials :
+- DCGAN : https://www.tensorflow.org/tutorials/generative/dcgan
+- Cycle-GAN : https://www.tensorflow.org/tutorials/generative/cyclegan
+- Autoencoder : https://www.tensorflow.org/tutorials/generative/autoencoder
+
 ![Database1](/Ressources/database1.JPG) ![DataBase2](/Ressources/database2.JPG)
 ## 0 - Requierement 
 For this project you need to use [Google Colaboratory](https://colab.research.google.com/notebooks/intro.ipynb) to run the code. 
@@ -50,6 +55,7 @@ To train the Clean to Dammaged GAN use the [Clean_apple.zip](https://github.com/
 To train the Clean to Dammaged GAN run the [Clean_to_dammaged_apples.ipynb](https://github.com/DelphineGambier/EMI--CVVR2-Generative-adversarial-network/blob/main/1-GANs/Clean_to_dammaged_apples.ipynb) Notebook.
 - Results : 
 Images obtained after training  :
+
 ![Results 2](/Ressources/results2.png)
 
 We can see that the GAN turn a good red apple in yellow and green.
@@ -110,6 +116,17 @@ Get the FID by entering the following command in Google Colaboratory :
 ! python compare_output.py -o out -g gold
 ```
 ## IV -  To go further
+### Areas for improvement for GANs:
+- The number of training images : The trainings were carried out with only about 400 images while the GANs trained with MNIST are trained on 60 000 images.
+- The type of images : There are many different images, perhaps the training would be more effective on images of an apple on a white background.
+- The Generator : Change the structure of the generator and its layers.
+
+### Areas for improvement for Autoencoders:
+- Training time : Train the autoencoder longer.
+- Type of autoencoder: Try with a convolutional autoencoder.
+- For the RGB Autoencoder : Train the autoencoders of the 3 components together instead of separately.
+- To generate a base : encode a defect in the apple to have different apples. 
+
 If you want to go deeper into the subject, here are some links to other projects about GANs (but they use Pytorch instead of Tensorflow) :
 - GAN that generates foreground and background separately : https://github.com/jwyang/lr-gan.pytorch
 - GAN that generates several objects in one image : https://github.com/tohinz/multiple-objects-gan
